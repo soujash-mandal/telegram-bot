@@ -186,8 +186,8 @@ function generateWeatherMessage(jsonData, cityJsonData, userInputType) {
   
   ------------------------------------------
 
-  Sunrise : ${timestampToTime(jsonData.sys.sunrise+150*60)}  🌄
-  Sunset  : ${timestampToTime(jsonData.sys.sunset+150*60)}  🌃
+  Sunrise : ${timestampToTime(jsonData.sys.sunrise+330 * 60)}  🌄
+  Sunset  : ${timestampToTime(jsonData.sys.sunset+330*60)}  🌃
 
   Minimum Temperature  : ${(jsonData.main.temp_min - 273.15).toFixed(1)} °C
   Maximum Temperature : ${(jsonData.main.temp_max - 273.15).toFixed(1)} °C
