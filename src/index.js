@@ -14,9 +14,7 @@ const token = process.env.TOKEN;
 const bot = new telegrambot(token, { polling: true });
 
 // connect to MongoDB
-mongoose
-  .connect("mongodb://127.0.0.1:27017/weather-bot")
-  .then(() => console.log("Connected!"));
+mongoose.connect(process.env.MONGO_URL).then(() => console.log("Connected!"));
 
 // Two Type Of bot messages input has been handled
 bot.on("message", handleMessage);
